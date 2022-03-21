@@ -1,5 +1,3 @@
-//"use strict";
-
 var Scene = {
     canvas : undefined,
     canvasContext : undefined,
@@ -45,6 +43,7 @@ Scene.update = function () {
  		Scene.sprite.offset=-Scene.sprite.frames[Scene.sprite.frame].frame.w;
 		 
 };
+
 Scene.draw = function () {
 
 	Scene.canvasContext.drawImage(Scene.sprite.img
