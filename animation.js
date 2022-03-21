@@ -1,4 +1,4 @@
-"use strict";
+//"use strict";
 
 var Scene = {
     canvas : undefined,
@@ -24,19 +24,19 @@ Scene.start = function () {
 	}
 };
 
+//Button to start the animation
 document.addEventListener( 'click', Scene.start);
 
 Scene.mainLoop = function() {
    // Scene.clearCanvas();
     Scene.update();
     Scene.draw();
-		// Animate at 24 frames a second.
     window.setTimeout(Scene.mainLoop, 500);
 	
 };
 
 Scene.update = function () {
-	// Set the canvas width to be that of the display Window. Which helps if you resize the window.
+	// Set the canvas width
   	Scene.canvas.width = 400;
 	
 	// Set the location of the next frame. 
@@ -60,7 +60,7 @@ Scene.draw = function () {
 	
 	if(Scene.sprite.frame>=11)
 		Scene.drawTen();
-		
+
 	//advance to 1 after loop ends
 	if(Scene.sprite.frame==11)
 		Scene.sprite.frame=1;
